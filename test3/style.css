@@ -1,0 +1,19 @@
+.container{
+  background-color: #ffc4c4;
+}
+div{
+  height: 100px;
+  width: 100px;
+}
+#first{
+  background-color: #d3ffa7;
+}
+#second{
+  background-color: #ff95aa;
+  position: relative;
+  left: 0px;
+  top: 100px;
+}
+#third{
+  background-color: hotpink;
+}

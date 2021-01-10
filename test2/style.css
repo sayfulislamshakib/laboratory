@@ -1,0 +1,42 @@
+body{
+  margin: 0;
+  background-color: #dddddd;
+}
+*{
+  box-sizing: border-box;
+}
+/* .container{
+  max-width: 1140px;
+  background-color: #ffffff;
+  height: 100%;
+  margin: 40px auto;
+  padding: 20px;
+} */
+h1{
+  font-size: 30px;
+  margin: 0;
+}
+.section1{
+  float: left;
+  width: 100%;
+  background-color: rgb(133, 133, 133);
+  text-align: center;
+  padding: 50px 10px;
+  padding: 15px;
+}
+.section1 .content{
+	float:left;
+	width: 100%;
+	margin-top:60px;
+}
+.section1 .content .card{
+  width:25%;
+  float: left;
+  padding:0px 10px;
+}
+.section1 .content .card .box{
+	background-color:gray;
+	font-size:30px;
+	color:#fff;
+	padding:40px 10px;
+}
