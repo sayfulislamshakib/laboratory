@@ -1,0 +1,17 @@
+*{
+  font-family: 'Poppins', sans-serif;
+}
+.my-card{
+  border: none;
+}
+.my-card-footer{
+  background-color: white;
+  border: none;
+}
+.categories img{
+  width: 100px;
+}
+.my-slide{
+  background-color: #fceae8;
+  border-radius: 1em;
+}
