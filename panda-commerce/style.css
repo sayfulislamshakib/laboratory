@@ -15,3 +15,8 @@
   background-color: #fceae8;
   border-radius: 1em;
 }
+.carousel-control-next-icon, .carousel-control-prev-icon{
+  background-color: #000000;
+  padding: 30px;
+  border-radius: 50%;
+}
