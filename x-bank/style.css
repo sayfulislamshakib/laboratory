@@ -1,0 +1,33 @@
+/* body style */
+body {
+	padding: 100px;
+}
+/* submit area style */
+.submit-area {
+	margin-top: 50px;
+	padding: 50px;
+	border-radius: 20px;
+	box-shadow: 1px 1px 30px gray;
+}
+/*transection-area style*/
+#transection-area {
+	display: none;
+}
+
+.status {
+	padding: 40px;
+	margin: 0 20px;
+	border-radius: 10px;
+	color: #ffffff;
+}
+.deposit {
+	background-color: #ffb560;
+}
+
+.withdraw {
+	background-color: #c5ff6e;
+}
+
+.blance {
+	background-color: #8d6eff;
+}
