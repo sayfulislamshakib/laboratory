@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+  <!-- header area start -->
 
   <head>
     <meta charset="UTF-8">
@@ -8,6 +9,10 @@
     <meta http-equiv="X-UA-Compatible"
           content="ie=edge">
     <title>X-Bank</title>
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
+          rel="stylesheet">
     <link rel="stylesheet"
           href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
           integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
@@ -15,26 +20,37 @@
     <link rel="stylesheet"
           href="style.css">
   </head>
-  <!-- body area start -->
+  <!--header area end-->
+  <!--body area start-->
 
   <body>
+    <!--login area start-->
     <div id="login-area">
       <h1 class="text-center">Welcome to X-Bank</h1>
       <div class="submit-area">
         <h4>Login</h4>
+        <!-- input area start -->
         <input type="text"
                class="form-control"
                placeholder="Email">
+        <!-- line brake 1 -->
         <br>
         <input type="password"
                class="form-control"
                placeholder="Password">
+        <!--line brake 2-->
         <br>
+        <!--input area end-->
+        <!--button start-->
         <button id="login"
                 class="btn btn-success">Login</button>
+        <!--button end-->
       </div>
     </div>
+    <!--login area end-->
+    <!-- Transaction Area start-->
     <div id="transaction-area">
+      <h1 class="text-center">Welcome to your account here is your status</h1>
       <div class="row">
         <div class="col-md-4">
           <div class="deposit status">
@@ -51,7 +67,7 @@
         <div class="col-md-4">
           <div class="balance status">
             <h5>Balance</h5>
-            <h2>$ <span id="currentBalance">1240</span></h2>
+            <h2>$ <span id="currentBalance">00</span></h2>
           </div>
         </div>
       </div>
@@ -82,6 +98,7 @@
         </div>
       </div>
     </div>
+    <!-- Transaction Area end -->
     <script>
       // login button event handler
       const loginBtn = document.getElementById("login");
