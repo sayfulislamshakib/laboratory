@@ -76,11 +76,9 @@ function hotelCost(days) {
 		var tenDays = days - 10;
 		tenDaycost = tenDays * 80 + 1000;
 		elevenDasyAfter = tenDays * 80 + 1000;
-	} else if (days > 21) {
-		var newTenDays = days - 20;
-		var anotherDays = 10 * 100 + 10 * 80;
-		tenDaycost = newTenDays * 50 + anotherDays;
-	}
+	} else if (days > 21) var newTenDays = days - 20;
+	var anotherDays = 10 * 100 + 10 * 80;
+	tenDaycost = newTenDays * 50 + anotherDays;
 	return tenDaycost;
 }
 var totalcost = hotelCost(100);
