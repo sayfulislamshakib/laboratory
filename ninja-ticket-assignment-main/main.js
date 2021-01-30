@@ -22,16 +22,16 @@ document
 	.addEventListener("click", function () {
 		handleTicketChange("economy", false);
 	});
-// showing confirmation area
+// showing success area
 document.getElementById("book-now").addEventListener("click", function () {
-	document.getElementById("confirmation-area").style.display = "flex";
+	document.getElementById("success").style.display = "flex";
 });
-// hiding confirmation area and reset all the values
-document.getElementById("cross-sign").addEventListener("click", function () {
-	document.getElementById("confirmation-area").style.display = "none";
+// hiding success area & reset all the values
+document.getElementById("success-cut").addEventListener("click", function () {
+	document.getElementById("success").style.display = "none";
 
-	//reset all the values
-	// values in the form
+	//make all the value 0 all the values
+	// use input in the form
 	document.getElementById("first-class-count").value = 0;
 	document.getElementById("economy-count").value = 0;
 	document.getElementById("subtotal-amount").innerText = "$" + 0;
@@ -83,7 +83,7 @@ function calculateTotal() {
 	document.getElementById("total-bill").innerText = "$" + Total;
 }
 
-// calculating the ticket amount
+// calculating the tickets amount
 function getInputValue(ticket) {
 	const ticketInput = document.getElementById(ticket + "-count");
 	const ticketCount = parseInt(ticketInput.value);
