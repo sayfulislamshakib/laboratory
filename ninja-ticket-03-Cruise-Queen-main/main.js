@@ -38,13 +38,13 @@ document.getElementById("success-cut").addEventListener("click", function () {
 	document.getElementById("vat-amount").innerText = "$" + 0;
 	document.getElementById("total-amount").innerText = "$" + 0;
 
-	// values in the confirmation area
+	// values in the success area
 	document.getElementById("first-class-ticket").innerText = 0;
 	document.getElementById("economy-ticket").innerText = 0;
 	document.getElementById("total-bill").innerText = "$" + 0;
 });
 
-// function for managing the whole system
+// decreasing count function
 function handleTicketChange(ticket, isIncreasing) {
 	const ticketCount = getInputValue(ticket);
 	let ticketNewCount = ticketCount;
@@ -58,32 +58,32 @@ function handleTicketChange(ticket, isIncreasing) {
 	calculateTotal();
 }
 
-// calculation of ticket prices
+// count of ticket prices
 function calculateTotal() {
 	const firstClassCount = getInputValue("first-class");
 	const economyCount = getInputValue("economy");
 
-	// sending ticket amount to confirmation area
+	// show ticket amount to success area
 	document.getElementById("first-class-ticket").innerText = firstClassCount;
 	document.getElementById("economy-ticket").innerText = economyCount;
 
-	// Calculating subtotal
+	// count subtotal
 	const subTotal = firstClassCount * 150 + economyCount * 100;
 	document.getElementById("subtotal-amount").innerText = "$" + subTotal;
 
-	// Calculating VAT
+	// count VAT
 	const vat = Math.round(subTotal * 0.1);
 	document.getElementById("vat-amount").innerText = "$" + vat;
 
-	// Calculating Total
+	// count Total
 	const Total = subTotal + vat;
 	document.getElementById("total-amount").innerText = "$" + Total;
 
-	// sending total amount to confirmation area
+	// show total amount to success area
 	document.getElementById("total-bill").innerText = "$" + Total;
 }
 
-// calculating the tickets amount
+// count the tickets amount
 function getInputValue(ticket) {
 	const ticketInput = document.getElementById(ticket + "-count");
 	const ticketCount = parseInt(ticketInput.value);
