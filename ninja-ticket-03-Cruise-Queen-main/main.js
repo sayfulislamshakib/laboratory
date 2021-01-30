@@ -41,7 +41,7 @@ document.getElementById("success-cut").addEventListener("click", function () {
 	// values in the success area
 	document.getElementById("first-class-ticket").innerText = 0;
 	document.getElementById("economy-ticket").innerText = 0;
-	document.getElementById("total-bill").innerText = "$" + 0;
+	document.getElementById("fullBill").innerText = "$" + 0;
 });
 
 // decreasing count function
@@ -75,12 +75,12 @@ function calculateTotal() {
 	const vat = Math.round(subTotal * 0.1);
 	document.getElementById("vat-amount").innerText = "$" + vat;
 
-	// count Total
+	// count total
 	const Total = subTotal + vat;
 	document.getElementById("total-amount").innerText = "$" + Total;
 
 	// show total amount to success area
-	document.getElementById("total-bill").innerText = "$" + Total;
+	document.getElementById("fullBill").innerText = "$" + Total;
 }
 
 // count the tickets amount
