@@ -23,30 +23,35 @@ input {
 }
 
 button {
-	color: white;
+	color: #424242;
 	border-radius: 5px;
 	font-weight: 600;
 	font-size: 45px;
-	background: #3a3a3a;
+	background: #f1f2f3;
 	border: none;
 	width: 70px;
 	height: 70px;
 	margin: 6px;
 }
-
+button:hover {
+	background-color: #e7e7e7;
+}
 .calculator {
 	/* border: 2px solid #ff0000; */
-	background-color: #d9ffe5;
+	background-color: #ffffff;
 	padding: 23px;
 	border-radius: 4px;
 	display: inline-block;
+}
+.calculator:hover {
+	background-color: #ffffff;
 }
 .special-caracter {
 	background-color: #8462ff;
 }
 #extra-color {
-	background-color: #6fff44;
-	color: #3a3a3a;
+	background-color: #4285f4;
+	color: #ffffff;
 }
 #extra-color-2 {
 	background-color: #ff4949;
