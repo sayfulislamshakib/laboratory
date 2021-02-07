@@ -1,15 +1,16 @@
+//declear a function
 const showFood = () => {
-    const searchInput = document.getElementById('searchInput').value;
-    const foodItems = document.getElementById('food-items');
-    fetch(`https://www.themealdb.com/api/json/v1/1/search.php?s=${searchInput}`)
-        .then(res => res.json())
-        .then(data => {
-            data.meals.forEach(foodItem => {
-                const foodBox = document.createElement('div');
-                foodBox.className = 'food-box';
-                const thumb = foodItem.strMealThumb;
-                const foodName = foodItem.strMeal;
-                foodBox.innerHTML = `
+	const searchInput = document.getElementById("searchInput").value;
+	const foodItems = document.getElementById("food-items");
+	fetch(`https://www.themealdb.com/api/json/v1/1/search.php?s=${searchInput}`)
+		.then((res) => res.json())
+		.then((data) => {
+			data.meals.forEach((foodItem) => {
+				const foodBox = document.createElement("div");
+				foodBox.className = "food-box";
+				const thumb = foodItem.strMealThumb;
+				const foodName = foodItem.strMeal;
+				foodBox.innerHTML = `
                     <div class = "details" onclick="showDetails('${foodName}')">
                         <div class="food-icon">
                             <img src="${thumb}" alt="">
@@ -17,21 +18,21 @@ const showFood = () => {
                         <h5 class="food-name">${foodName}</h5>
                     </div>
                 `;
-                foodItems.appendChild(foodBox);
-            });
-        })
-        .catch(err => alert('Please give a valid name'));
-}
-
-const showDetails = name => {
-    const container = document.getElementById('details');
-    fetch(`https://www.themealdb.com/api/json/v1/1/search.php?s=${name}`)
-        .then(res => res.json())
-        .then(data => {
-            const item = data.meals[0];
-            container.innerHTML = `
+				foodItems.appendChild(foodBox);
+			});
+		})
+		.catch((err) => alert("Please enter valid food name!"));
+};
+//html part start
+const showDetails = (name) => {
+	const container = document.getElementById("details");
+	fetch(`https://www.themealdb.com/api/json/v1/1/search.php?s=${name}`)
+		.then((res) => res.json())
+		.then((data) => {
+			const item = data.meals[0];
+			container.innerHTML = `
             <div class = "detail-modal">
-                <p class = "detail-back" onclick="hideDetails()">&larr; &larr; Back to main page </p>
+                <p class = "detail-back" onclick="hideDetails()">&larr; Go Back </p>
                 <div class="detail-img-container">
                     <img class="detail-img" src="${item.strMealThumb}" alt="">
                 </div>
@@ -43,8 +44,8 @@ const showDetails = name => {
                     <li class="detai-li">${item.strIngredient3}</li>
                     <li class="detai-li">${item.strIngredient4}</li>
                     <li class="detai-li">${item.strIngredient5}</li>
-                    <li class="detai-li">${item.strIngredient6}</li>
                     <li class="detai-li">${item.strIngredient7}</li>
+                    <li class="detai-li">${item.strIngredient6}</li>
                     <li class="detai-li">${item.strIngredient8}</li>
                     <li class="detai-li">${item.strIngredient9}</li>
                     <li class="detai-li">${item.strIngredient10}</li>
@@ -60,13 +61,13 @@ const showDetails = name => {
                     <li class="detai-li">${item.strIngredient20}</li>
                 </ul>
             </div>
-            `
-        })
-}
+            `;
+		});
+};
 
-const btn = document.getElementById('basic-addon2');
-btn.addEventListener('click', showFood);
+const btn = document.getElementById("basic-addon2");
+btn.addEventListener("click", showFood);
 
 const hideDetails = () => {
-    document.querySelector('.detail-modal').style.display = 'none';
-}
+	document.querySelector(".detail-modal").style.display = "none";
+};
