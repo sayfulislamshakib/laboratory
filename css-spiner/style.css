@@ -1,0 +1,28 @@
+body {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-top: 100px;
+}
+
+.spinner {
+	border: 5px solid #0000001a;
+	width: 35px;
+	height: 35px;
+	border-radius: 50%;
+	border-left-color: #09f;
+	animation: spin 1s linear infinite;
+	overflow: hidden;
+}
+.text {
+	padding-left: 20px;
+	font-size: 25px;
+}
+@keyframes spin {
+	0% {
+		transform: rotate(0deg);
+	}
+	100% {
+		transform: rotate(360deg);
+	}
+}
