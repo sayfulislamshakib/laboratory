@@ -82,7 +82,7 @@ const createSlider = () => {
       item.className = "slider-item";
       item.innerHTML = `<img class="w-100"
       src="${slide}"
-      alt="">`;
+      alt="Slide images">`;
       sliderContainer.appendChild(item)
     })
     changeSlide(0)
