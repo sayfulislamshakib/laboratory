@@ -1,15 +1,55 @@
+/* Full html style */
 html {
   box-sizing: border-box;
   font-size: 100%;
 }
-
+/*Root elements*/
+:root {
+  --white: hsl(0, 0%, 100%);
+  --cyan: hsl(179, 62%, 45%);
+  --Ltcyan: hsl(179, 62%, 45%);
+  --yellow: hsl(71, 73%, 54%);
+  --Ltgray: hsl(204, 43%, 93%);
+  --grayblue: hsl(218, 22%, 67%);
+}
+/*Gobal styles*/
 *,
 *::before,
 *::after {
   box-sizing: inherit;
 }
-
+/* Body styles */
 body {
   font-family: "Karla", sans-serif;
   line-height: 1.3;
+  background-color: var(--Ltgray);
+  color: var(--grayblue);
+  padding: 1.8rem;
+}
+/* Price class styles */
+.price {
+  @media only screen and (min-width: 62.5em) {
+    display: grid;
+  }
+}
+/* Ancor link styles */
+a {
+  text-decoration: none;
+}
+/* Community class styles */
+.community {
+  background-color: var(--white);
+}
+/* community h2 styles */
+.community h2 {
+  color: var(--cyan);
+  font-weight: bold;
+}
+/* community h3 styles */
+.community h3 {
+  color: var(--yellow);
+}
+/* community p styles */
+.community p {
+  font-size: 0.85rem;
 }
